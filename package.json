@@ -1,0 +1,19 @@
+{
+  "name": "chalk",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "chalk-test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
+  },
+  "devDependencies": {
+    "@yao-pkg/pkg": "^6.4.0",
+    "patch-package": "^8.0.0"
+  }
+}

@@ -1,0 +1,21 @@
+name: build
+on:
+  push:
+    branches: [ 'main' ]
+  pull_request:
+    branches: [ 'main' ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Setup NodeJS
+        uses: actions/setup-node@1d0ff469b7ec7b3cb9d8673fde0c81c44821de2a # v4.2.0
+        with:
+          node-version: lts/*
+      - name: Install packages
+        run: npm i 
+      - name: Package with pkg
+        run: npx pkg -t node22-linux-x64 chalk-test.js -o chalk-test
+      - name: Test output
+        run: ./chalk-test

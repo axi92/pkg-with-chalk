@@ -1,10 +1,13 @@
 diff --git a/node_modules/@yao-pkg/pkg/prelude/bootstrap.js b/node_modules/@yao-pkg/pkg/prelude/bootstrap.js
-index 5fc3ee6..656ad8a 100644
+index 5fc3ee6..e3f822f 100644
 --- a/node_modules/@yao-pkg/pkg/prelude/bootstrap.js
 +++ b/node_modules/@yao-pkg/pkg/prelude/bootstrap.js
-@@ -1048,6 +1048,7 @@ function payloadFileSync(pointer) {
-     if (entityLinks) return cb2(error_EISDIR(path_));
+@@ -1046,8 +1046,9 @@ function payloadFileSync(pointer) {
  
+     const entityLinks = entity[STORE_LINKS];
+     if (entityLinks) return cb2(error_EISDIR(path_));
+-
++    console.log(entity);
      const entityContent = entity[STORE_CONTENT];
 +    console.log(entityContent);
      if (entityContent) return readFileFromSnapshotSub(entityContent, cb);

@@ -7,6 +7,7 @@
   "type": "module",
   "main": "chalk-test.js",
   "scripts": {
+    "postinstall": "patch-package",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
